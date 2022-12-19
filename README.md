@@ -479,11 +479,33 @@ For YOLOv5 bugs and feature requests please visit [GitHub Issues](https://github
 
 
 # Quick Demo:
-## first you need prepare kitti dataset as follow:
+## Step 1: You need prepare kitti dataset as follow:
 ```
 ├──datasets
 |  ├──kitti
 |     ├──images
 |     ├──labels
+|     ├──train.txt
+|     ├──val.txt
 ├──yolov5_kitti
 ```
+datasets/kitti/images contains all images in kitti/object/training/image_2/ folder. 
+datasets/kitti/labels could download from https://drive.google.com/file/d/1zf-dUPVW-piU6TZRYhRmXpNoXa5BCDGV/view?usp=share_link
+datasets/kitti/train.txt and val.txt could download from https://drive.google.com/file/d/1NIRdLkuduzgPizHlS9vXdNwpTZU5Ool4/view?usp=share_link
+  
+## Step 2: run split_train_val.py. 
+```
+python split_train_val.py
+```
+## Step 3: Generate a kitti.yaml in ./data/ as follow:
+```
+path: ../datasets/kitti  # dataset root dir
+train: train  # train images (relative to 'path') 118287 images
+val: val  # val images (relative to 'path') 5000 images
+test: val
+
+# Classes
+nc: 3
+names: ['Car', 'Cyclist', 'Pedestrian']
+```
+## Step 4
