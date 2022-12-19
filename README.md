@@ -480,8 +480,5 @@ For YOLOv5 bugs and feature requests please visit [GitHub Issues](https://github
 
 # Quick Demo:
 ## first you need prepare kitti dataset as follow:
--datasets\n
---kitti\n
----images\n
----labels\n
--yolov5_kitti
+datasets/kitti/images/
+datasets/kitti/labels/
