@@ -516,9 +516,9 @@ names: ['Car', 'Cyclist', 'Pedestrian']
   ```
 
 ## Step 5: run val
-```
+  ```
   python val.py --data data/kitti.yaml --weight ./best.pt
-```
+  ```
 ## Step 6: Visualization of results.
   ```
   python detect.py --data data/kitti.yaml --weight ./best.pt --source ../datasets/kitti/val/images
