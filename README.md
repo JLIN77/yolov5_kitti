@@ -523,6 +523,7 @@ names: ['Car', 'Cyclist', 'Pedestrian']
 <p align="center">
   <img src="./Selection_068.png" width="99%">
 </p>
+
 ## Step 6: Visualization of results.
   ```
   python detect.py --data data/kitti.yaml --weight ./best.pt --source ../datasets/kitti/val/images
