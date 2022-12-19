@@ -489,11 +489,11 @@ For YOLOv5 bugs and feature requests please visit [GitHub Issues](https://github
 |     ├──val.txt
 ├──yolov5_kitti
 ```
-datasets/kitti/images contains all images in kitti/object/training/image_2/ folder. 
+1. datasets/kitti/images contains all images in kitti/object/training/image_2/ folder. 
   
-datasets/kitti/labels could download from https://drive.google.com/file/d/1zf-dUPVW-piU6TZRYhRmXpNoXa5BCDGV/view?usp=share_link
+2. datasets/kitti/labels could download from https://drive.google.com/file/d/1zf-dUPVW-piU6TZRYhRmXpNoXa5BCDGV/view?usp=share_link
   
-datasets/kitti/train.txt and val.txt could download from https://drive.google.com/file/d/1NIRdLkuduzgPizHlS9vXdNwpTZU5Ool4/view?usp=share_link
+3. datasets/kitti/train.txt and val.txt could download from https://drive.google.com/file/d/1NIRdLkuduzgPizHlS9vXdNwpTZU5Ool4/view?usp=share_link
   
 ## Step 2: run split_train_val.py. 
 ```
@@ -510,4 +510,18 @@ test: val
 nc: 3
 names: ['Car', 'Cyclist', 'Pedestrian']
 ```
-## Step 4
+## Step 4: Dowload pretrained weight from below. And put the best.pt in yolov5_kitti folder.
+  ```
+  https://drive.google.com/file/d/1Tx8jVd8PlqXlkXmrsdunq8H5xgwjsTLw/view?usp=share_link
+  ```
+
+## Step 5: run val
+```
+  python val.py --data data/kitti.yaml --weight ./best.pt
+```
+## Step 6: Visualization of results.
+  ```
+  python detect.py --data data/kitti.yaml --weight ./best.pt --source ../datasets/kitti/val/images
+  ```
+
+
