@@ -490,7 +490,9 @@ For YOLOv5 bugs and feature requests please visit [GitHub Issues](https://github
 ├──yolov5_kitti
 ```
 datasets/kitti/images contains all images in kitti/object/training/image_2/ folder. 
+  
 datasets/kitti/labels could download from https://drive.google.com/file/d/1zf-dUPVW-piU6TZRYhRmXpNoXa5BCDGV/view?usp=share_link
+  
 datasets/kitti/train.txt and val.txt could download from https://drive.google.com/file/d/1NIRdLkuduzgPizHlS9vXdNwpTZU5Ool4/view?usp=share_link
   
 ## Step 2: run split_train_val.py. 
