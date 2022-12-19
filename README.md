@@ -517,7 +517,7 @@ names: ['Car', 'Cyclist', 'Pedestrian']
 
 ## Step 5: run val
   ```
-  python val.py --data data/kitti.yaml --weight ./best.pt
+  python val.py --data data/kitti.yaml --weights ./best.pt
   ```
   After a few minites, the val results shows as follow
 <p align="center">
@@ -526,7 +526,7 @@ names: ['Car', 'Cyclist', 'Pedestrian']
 
 ## Step 6: Visualization of results.
   ```
-  python detect.py --data data/kitti.yaml --weight ./best.pt --source ../datasets/kitti/val/images
+  python detect.py --data data/kitti.yaml --weights ./best.pt --source ../datasets/kitti/val/images
   ```
 
 
